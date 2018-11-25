@@ -17,3 +17,9 @@
 
 ### Similar Post Functionality
 ![similar](https://user-images.githubusercontent.com/42096975/48976837-45c33280-f0b4-11e8-8588-574256e7c853.PNG)
+
+### Latest Post Functionality
+![latest](https://user-images.githubusercontent.com/42096975/48976852-7e630c00-f0b4-11e8-9106-54386475abb3.PNG)
+
+### Most commented Post preferences
+![mostcommented](https://user-images.githubusercontent.com/42096975/48976853-81f69300-f0b4-11e8-9b20-955bad64a096.PNG)
