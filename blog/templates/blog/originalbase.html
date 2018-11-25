@@ -1,0 +1,49 @@
+{% load blog_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+   <title>{% block title %}{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+   
+</head>
+<body>
+  <div class="container-fluid">
+  <div class="row">
+
+  <div class="col-5 col-sm-3 col-md-2 col-lg-2 col-xl-2 bg-dark text-success">
+  <h3 class="most">My blog</h3>
+  <p class="most">This is Omnitrix.I have written {% total_posts %} posts so far.</p>
+  <p><a href="{% url "blog:post_feed" %}">Subscribe to my RSS feed</a></p>
+  <h4 class="most">Latest posts</h4>
+  {% show_latest_posts 4 %}
+  <h6 class="most">Most commented posts</h6>
+  {% get_most_commented_posts as most_commented_posts %}
+  <ul class="ul">
+  {% for post in most_commented_posts %}</ul>
+  <li>
+  <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+  <a href="https://www.python.org/">Click here to go Python official website</a><br>
+
+  <a href="http://127.0.0.1:8000/blog/search/">Search</a><br>
+
+  <img src="{% static 'blog.png' %}" height="100px" width="100px" class="rounded mx-auto d-block img-fluid" align="left">
+  </div>
+
+  <div class="col-7 col-sm-9 col-md-10 col-lg-10 col-xl-10 bg-white text-dark">
+  <img src="{% static 'mylogo.png' %}" alt="myblog image" width="300px" height="100px" class="rounded mx-auto d-block img-fluid" class="rounded float-left">
+  {% block content %}
+  {% endblock %}
+  </div>
+
+</div>
+</div>
+</body>
+</html> 

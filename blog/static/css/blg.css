@@ -1,0 +1,167 @@
+
+*
+{
+  margin:0px;
+  padding:0px;
+}
+<meta name="viewport" content="width=device-width">
+ @media(min-width:1px) and (max-width:575px)
+{
+#content
+{
+  background-color:cadetblue;
+  width:1000px;
+  float:left;
+  /*background-image:url("Wallpapers.jpg"); */
+  height:100%;
+  
+  transition:2s;
+  padding:10px; 
+  box-shadow:0px 0px 0px 0px red;
+}
+        
+#content img:hover
+{
+  transform:scale(1.1);
+}
+       
+#sidebar
+{
+  width:300px;
+  float:left;
+  background-image:url("side1.jpg");
+  height:100%;
+  color:white;
+  text-align:left;
+  margin-left:0px;
+  font-size:17px; 
+  box-shadow:0px 6px 0px 0px darkblue;
+  transition:2s;
+}
+}
+     
+#sidebar img:hover
+{
+  transform:translate(20px,20px);
+
+}
+
+/*for all headings*/
+#content h3
+{
+  background-color:skyblue;
+   font-weight:bold;
+   border-radius: 3px;
+   color:blue;
+   box-shadow:2px 2px 2px 2px darkblue;
+   width:150px;
+   margin-top:55px;
+   margin-bottom:20px;
+}
+
+#content h2
+{
+  background-color:skyblue;
+   
+   color:red;
+   margin-top:85px;
+   margin-bottom:20px;
+    width:400px;
+}
+/*Add your comment here*/
+.addcomment
+{
+  background-color:skyblue;
+   font-weight:bold;
+   font-weight:40px;
+   color:blue;
+   width:400px;
+   margin-top:85px;
+   margin-bottom:30px;
+}
+
+/*from list.html*/
+.tags 
+{
+  color:darkblue;
+  margin:15px;
+}
+
+/*from detail.html */
+.comment
+{
+  background-color:skyblue;
+  font-weight:normal;
+  border-radius:2px;
+   margin:15px;
+}
+
+/*from detail.html */
+.info
+{
+   background-color:skyblue;
+   font-weight:bold;
+   border-radius:3px;
+   /*box-shadow:1px 1px 1px 1px darkblue;*/
+   margin:0px;
+}
+ /*from list.html*/
+.date
+{
+   background-color:skyblue;
+   font-weight:bold;
+   border-radius: 3px;
+   color:#eb7526;
+   box-shadow:2px 2px 2px 2px darkblue;
+   padding:0px;
+  margin:15px;
+  width:500px;
+}
+
+/*from detail.html*/
+.button
+{
+  text-align:left;
+  margin:15px;
+}
+.button button
+{
+  font-size:12px;
+  background-color: blue;
+  border:1px solid darkblue;
+  padding:6px;
+  border-radius:5px;
+  cursor:pointer;
+  transition:background-color 0.5s, color 0.5s, box-shadow 0.5s;
+  box-shadow:0px 0px 2px 1px skyblue;
+  font-weight:bold;
+  margin:15px;
+}
+.button button:hover
+{
+  background-color:darkblue;
+  color:white;
+  box-shadow:0px 0px 2px px skyblue;
+}
+
+.ul
+{
+margin-left:21px;
+}
+
+.most
+{
+margin-left:25px;
+margin:20px;
+}
+
+.similar
+{
+margin:7px;
+}  
+     
+
+    
+
+  
+  

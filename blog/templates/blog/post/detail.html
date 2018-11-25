@@ -1,0 +1,50 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+{% block title %} {{ post.title }} {% endblock %}
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+<p>
+<span class="badge badge-pill badge-primary"><i> Published: {{ post.publish }} by {{post.author}}</i></span><div class="rounded badge-pill bg-light text-dark height-400px"></p>
+{{ post.body|markdown }}
+<p><h4><div class="rounded badge-pill bg-dark text-light height-400px"><a href="{% url "blog:post_share" post.id %}">
+Click here to share this post via mail</a></div></h4></p>
+
+<h3><p class="text-success">Similar posts<p></h3>
+{% for post in similar_posts %}
+<p><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></p>
+{% empty %}
+No similar posts yet.
+{% endfor %}
+
+{% with comments.count as total_comments %}
+<h3><span class="badge badge-pill badge-primary">{{ total_comments }} comment{{ total_comments|pluralize }}</span></h3>
+{% endwith %}
+{% for comment in comments %}
+<div class="comment">
+
+<p><div class="rounded badge-pill font-weight-bold bg-primary text-danger height-400px"><i>
+Comment {{ forloop.counter }} by {{ comment.name }}
+{{ comment.created }}</i></div></p>
+
+{{ comment.body|linebreaks }}</div>
+{% empty %}
+<p>Be the first to react.</p>
+{% endfor %}
+{% if new_comment %}
+
+<h4>Your comment has been added successfully.</h4>
+{% else %}
+<div class="comment-form">
+
+<!----<div class="rounded badge-pill font-weight-bold bg-light text-dark height-400px">--->
+<h3>Add your comment here..</h3>
+<form action="." method="post">
+{{ comment_form.as_p }}
+{% csrf_token %}
+<button class="btn btn-primary">Add comment</button>
+<a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!"></a>
+</form>
+</div>
+{% endif %}
+{% endblock %}

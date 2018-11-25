@@ -1,0 +1,41 @@
+{% load blog_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="popper.js"></script>
+    <script src="bootstrap.js"></script>
+ 
+</head>
+<body>
+<div class="container">
+<div class="row">
+  <div class="col-9 bg-primary">
+  <img src="{% static 'mylogo.png' %}" alt="myblog image" width="300px" height="100px">
+  {% block content %}
+  {% endblock %}
+  </div>
+
+  <div class="col-3 bg-primary text-white">
+  <h2 class="most">My blog</h2>
+  <p class="most">This is my blog.I have written {% total_posts %} posts so far.</p>
+  <h3 class="most">Latest posts</h3>
+  {% show_latest_posts 3 %}
+  <h3 class="most">Most commented posts</h3>
+  {% get_most_commented_posts as most_commented_posts %}
+  <ul class="ul">
+  {% for post in most_commented_posts %}
+  <li>
+  <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+  
+  <img src="{% static 'blog.png' %}" height="100px" width="100px">
+  </div>
+</div>
+</div>
+</body>
+</html>
