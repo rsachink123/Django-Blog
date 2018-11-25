@@ -8,3 +8,12 @@
 
 ### Share the post through mail for recommendation to read the Post.
 ![share](https://user-images.githubusercontent.com/42096975/48976809-efee8a80-f0b3-11e8-9edc-8cab9a46b744.PNG)
+
+### Tagging Functionality
+![tag](https://user-images.githubusercontent.com/42096975/48976832-36dc8000-f0b4-11e8-9524-cff4ba322e7a.PNG)
+
+### Add Link with a Post
+![link](https://user-images.githubusercontent.com/42096975/48976836-41971500-f0b4-11e8-938a-a6ca3d167d03.PNG)
+
+### Similar Post Functionality
+![similar](https://user-images.githubusercontent.com/42096975/48976837-45c33280-f0b4-11e8-8588-574256e7c853.PNG)
